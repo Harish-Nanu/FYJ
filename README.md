@@ -1,0 +1,1 @@
+For You Job (FYJ) is a live web tool that collects fresher job or internship posts in India from public sources and shows them on a searchable page.
