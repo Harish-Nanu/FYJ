@@ -1,0 +1,134 @@
+/* Small tweaks on top of Pico CSS (yellow theme). */
+
+:root {
+  --fyj-yellow: #ffd43b;
+  --fyj-yellow-soft: #fff8d6;
+  --fyj-yellow-border: #f5dc6b;
+  --fyj-ink: #2b2400;
+  --pico-background-color: #ffffff;
+}
+
+body {
+  background: #ffffff;
+}
+
+/* White header with the logo and a yellow line underneath */
+.hero {
+  background: #ffffff;
+  color: var(--fyj-ink);
+  padding: 1.5rem 0 1.25rem;
+  margin-bottom: 0;
+  border-bottom: 6px solid var(--fyj-yellow);
+}
+
+.hero h1 {
+  margin-bottom: 0.5rem;
+  line-height: 0;
+}
+
+.hero .logo {
+  height: 110px;
+  width: auto;
+  max-width: 100%;
+}
+
+.hero p {
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.hero small {
+  display: inline-block;
+  background: var(--fyj-yellow-soft);
+  border: 1px solid var(--fyj-yellow-border);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.75rem;
+}
+
+@media (max-width: 576px) {
+  .hero .logo {
+    height: auto;
+    width: 260px;
+  }
+}
+
+/* Filter panel sits on a pale yellow card */
+.filters {
+  background: var(--fyj-yellow-soft);
+  border: 1px solid var(--fyj-yellow-border);
+  border-radius: var(--pico-border-radius);
+  padding: 1.25rem 1.25rem 0.5rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.filters input:not([type="checkbox"]),
+.filters select {
+  background-color: #ffffff;
+}
+
+/* Job cards */
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.job-list article {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #eee7c4;
+  border-top: 4px solid var(--fyj-yellow);
+  box-shadow: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.job-list article:hover {
+  box-shadow: 0 6px 18px rgba(120, 100, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.job-list article h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+  color: var(--fyj-ink);
+}
+
+.job-list article footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fffdf3;
+}
+
+.job-list article footer a[role="button"] {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  background: var(--fyj-yellow-soft);
+  border: 1px solid var(--fyj-yellow-border);
+  color: #5c4d00;
+}
+
+.tag.new {
+  background: var(--fyj-yellow);
+  border-color: var(--fyj-yellow);
+  color: var(--fyj-ink);
+  font-weight: 600;
+}

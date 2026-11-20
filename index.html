@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>For You Job</title>
+  <meta name="description" content="Fresher jobs and internships in India, refreshed daily.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <!-- Pico CSS (yellow theme): styles plain HTML elements, so we barely need our own CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.yellow.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1><img src="assets/logo.png" alt="FYJ – For You Job" class="logo"></h1>
+      <p>Fresher jobs and internships in India, refreshed daily.</p>
+      <small id="status">Loading…</small>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <input type="search" id="search" placeholder="Search by title or company" aria-label="Search jobs">
+      <div class="grid">
+        <select id="role" aria-label="Role"><option value="">All roles</option></select>
+        <select id="city" aria-label="City"><option value="">All cities</option></select>
+        <select id="type" aria-label="Job type"><option value="">All job types</option></select>
+      </div>
+      <label>
+        <input type="checkbox" id="freshers-only" role="switch" checked>
+        Freshers only (0–1 years of experience)
+      </label>
+    </section>
+
+    <p id="result-count"></p>
+    <section id="job-list" class="job-list"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
