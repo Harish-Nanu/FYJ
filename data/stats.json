@@ -1,0 +1,14 @@
+{
+  "updated_at": "2026-11-20T06:23:45.205288+00:00",
+  "total_jobs": 171,
+  "sources": [
+    "stripe",
+    "groww",
+    "razorpaysoftwareprivatelimited",
+    "airbnb",
+    "databricks"
+  ],
+  "duplicates_removed": 0,
+  "llm_cost_usd": null,
+  "note": "Sample data (rule-based tags), not yet LLM-tagged"
+}
